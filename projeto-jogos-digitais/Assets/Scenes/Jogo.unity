@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b79162e00e7844589cba3b986b8979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meuTiro: {fileID: 681392150777337841, guid: c344a2be33ca9e447ae3b6b74295c4b8, type: 3}
   velocidade: 5
 --- !u!50 &104124085
 Rigidbody2D:
@@ -314,8 +315,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917026987}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,8 +360,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1732931327
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -902587696, guid: 6d442367ed986a24ea0af48fde60c11e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
