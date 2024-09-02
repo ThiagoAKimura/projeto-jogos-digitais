@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 70471711cabcf1444b040428cb591b02
+  productGUID: 4f3064aa99c7fc7468165652242fd068
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: projetos-jogos-digitais
+  productName: projeto-jogos-digitais
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -630,14 +630,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: projetos-jogos-digitais
+  metroPackageName: projeto-jogos-digitais
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: projetos-jogos-digitais
+  metroApplicationDescription: projeto-jogos-digitais
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -706,10 +706,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: e0db5628-cbf9-4121-b787-7005a769fa03
+  cloudProjectId: 20c5cc0a-c0ce-4d90-a5c3-8bb38ef2c28d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: projetos-jogos-digitais
+  projectName: projeto-jogos-digitais
   organizationId: kimuras00
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
