@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5663860629009098758}
   - component: {fileID: 2284371638436344242}
   - component: {fileID: 5601393355905773599}
+  - component: {fileID: 2316144169005244148}
   m_Layer: 0
   m_Name: Tiro
   m_TagString: Untagged
@@ -96,6 +97,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &2316144169005244148
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681392150777337841}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000686273, y: -0.0026588142}
+  m_Size: {x: 0.16065499, y: 0.25729758}
+  m_Direction: 0
 --- !u!1 &5115874898816721993
 GameObject:
   m_ObjectHideFlags: 0

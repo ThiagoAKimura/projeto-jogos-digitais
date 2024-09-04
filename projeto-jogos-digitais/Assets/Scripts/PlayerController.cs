@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public GameObject meuTiro;
     [SerializeField] float velocidade = 5f;
     private Rigidbody2D meuRB;
+
+    //oi
     // Start is called before the first frame update
     void Start()
     {
