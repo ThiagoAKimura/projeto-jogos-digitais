@@ -6,7 +6,7 @@ public class TiroController : MonoBehaviour
 {
 
     private Rigidbody2D meuRB;
-    [SerializeField] private float vel = 10f;
+    [SerializeField] private GameObject impacto;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class TiroController : MonoBehaviour
         meuRB = GetComponent<Rigidbody2D>();
 
         //Indo para cima
-        meuRB.velocity = new Vector2(0f, vel);
+        //meuRB.velocity = new Vector2(0f, vel);
     }
 
     // Update is called once per frame
@@ -25,6 +25,16 @@ public class TiroController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.CompareTag("Inimigo")){
+            collision.GetComponent<InimigoPai>().PerdeVida(1);
+        }
+
+        else if(collision.CompareTag("Jogador")){
+            collision.GetComponent<PlayerController>().PerdeVida(1);
+        }
+
         Destroy(gameObject);
+
+        Instantiate(impacto, transform.position, transform.rotation);
     }
 }

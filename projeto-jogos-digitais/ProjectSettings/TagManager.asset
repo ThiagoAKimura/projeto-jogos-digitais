@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Inimigo
+  - Jogador
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Inimigos
+  - Player
+  - Tiro Player
+  - Tiro Inimigo
   - 
   - 
   - 
@@ -41,11 +43,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Inimigos
-    uniqueID: 4069585031
-    locked: 0
   - name: Tiros
     uniqueID: 109215121
+    locked: 0
+  - name: Inimigos
+    uniqueID: 4069585031
     locked: 0
   - name: Player
     uniqueID: 2562035969
