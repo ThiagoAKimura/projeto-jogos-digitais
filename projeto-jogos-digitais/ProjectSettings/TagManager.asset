@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Inimigo
   - Jogador
+  - Destruidor
+  - Power Up
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - Player
   - Tiro Player
   - Tiro Inimigo
-  - 
-  - 
-  - 
+  - Power Up
+  - Boss
+  - PostProcessing
   - 
   - 
   - 
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2562035969
+    locked: 0
+  - name: UI
+    uniqueID: 3235894449
     locked: 0

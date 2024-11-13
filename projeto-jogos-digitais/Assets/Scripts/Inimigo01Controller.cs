@@ -36,7 +36,6 @@ public class Inimigo01Controller : InimigoPai
 
         //Pegar informações dos "Filhos"
         bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
-
         if(visivel){
             //Diminuir espera
     	    esperaTiro -= Time.deltaTime;
@@ -45,6 +44,8 @@ public class Inimigo01Controller : InimigoPai
                 tiro.GetComponent<Rigidbody2D>().velocity = Vector2.down * velocidadeTiro;
 
                 esperaTiro = UnityEngine.Random.Range(1.5f,2f);
+
+                TocaTiro();
         }
         }
     }

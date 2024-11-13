@@ -155,10 +155,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meuTiro: {fileID: 681392150777337841, guid: c344a2be33ca9e447ae3b6b74295c4b8, type: 3}
+  meuTiro2: {fileID: 6925450145672309707, guid: 6330e55a6a3e6d04aad99df22e3d231c, type: 3}
   velocidade: 5
   posicaoTiroPlayer: {fileID: 7990943483653888598}
-  vida: 1
+  vida: 10
   explosao: {fileID: 2795100010791555616, guid: 4c4878d053f35c14a9481b0e13fd2dd5, type: 3}
+  velocidadeTiro: 10
+  xLimite: 8.3
+  yLimite: 4.4
+  levelTiro: 1
+  meuEscudo: {fileID: 1797694794229920491, guid: 67975c6c613bc8045a2ff33a5488f214, type: 3}
+  qtdEscudo: 5
+  vidaTexto: {fileID: 0}
+  escudoTexto: {fileID: 0}
+  somTiro: {fileID: 8300000, guid: 572eae8ddaa3add49a3b817849960f20, type: 3}
+  somMorte: {fileID: 8300000, guid: 3e7efd99d93d379409fa16f8b9b761b0, type: 3}
+  somEscudo: {fileID: 8300000, guid: fb3b5ee6e79e9434ea6adf0fdc649562, type: 3}
+  somEscudoDown: {fileID: 8300000, guid: 7c8582f7a6f3e9844bc2805e5828d760, type: 3}
 --- !u!50 &256989745073873363
 Rigidbody2D:
   serializedVersion: 4
@@ -167,7 +180,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4443436401229917602}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

@@ -202,7 +202,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &450214452036011956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,8 +215,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79be4c9d5881424eb186e2d1fd23655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: -2
-  vida: 1
+  velocidade: -1
+  vida: 2
   explosao: {fileID: 2795100010791555616, guid: 4c4878d053f35c14a9481b0e13fd2dd5, type: 3}
+  esperaTiro: 4
   meuTiro: {fileID: 6614790805580912407, guid: 859e6537fb08db641b9b3ce56e7b9c7e, type: 3}
+  velocidadeTiro: 3
+  pontos: 25
+  powerUp: {fileID: 4223714539278304552, guid: 6a895ae833b21eb4f89de5601263a3ea, type: 3}
+  itemRate: 0.97
+  somTiro: {fileID: 8300000, guid: bf11eedf7efc944448b95c1b34126b68, type: 3}
   posicaoTiro: {fileID: 7130024794191874230}
+  yMax: 2.5

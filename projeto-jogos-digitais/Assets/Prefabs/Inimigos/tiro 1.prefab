@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4290209990743642678}
   m_Layer: 9
   m_Name: tiro 1
-  m_TagString: EditorOnly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11235ab27691ab84181e3413ac12c444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: -6
   impacto: {fileID: 2422558275438921952, guid: bcf870b517a70354d8ed9fe5e2a534e6, type: 3}
 --- !u!58 &8679513831585964990
 CircleCollider2D:

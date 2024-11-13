@@ -26,7 +26,8 @@ public class TiroController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Inimigo")){
-            collision.GetComponent<InimigoPai>().PerdeVida(1);
+            var ini = collision.GetComponent<InimigoPai>();
+            ini.PerdeVida(1);
         }
 
         else if(collision.CompareTag("Jogador")){
