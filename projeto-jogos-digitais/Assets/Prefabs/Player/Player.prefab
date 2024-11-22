@@ -168,6 +168,7 @@ MonoBehaviour:
   qtdEscudo: 5
   vidaTexto: {fileID: 0}
   escudoTexto: {fileID: 0}
+  delayVida: 0
   somTiro: {fileID: 8300000, guid: 572eae8ddaa3add49a3b817849960f20, type: 3}
   somMorte: {fileID: 8300000, guid: 3e7efd99d93d379409fa16f8b9b761b0, type: 3}
   somEscudo: {fileID: 8300000, guid: fb3b5ee6e79e9434ea6adf0fdc649562, type: 3}

@@ -34,7 +34,7 @@ public class AnimacaoBoss : MonoBehaviour
         var gameManager = FindObjectOfType<GameManager>();
         if(gameManager)
         {
-            gameManager.Menu();
+            gameManager.Vitoria();
         }
     }
 

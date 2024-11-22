@@ -15,6 +15,8 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private Text pontosTexto;
     [SerializeField] private AudioClip musicaBoss;
     [SerializeField] private AudioSource musica;
+    [SerializeField] private ParticleSystem sistemaParticulas;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class GeradorInimigos : MonoBehaviour
 
         if(!animacaoBoss && tempoEspera <= 0)
         {
+
             GameObject animBoss = Instantiate(bossAnimation,Vector3.zero,transform.rotation);
 
             animacaoBoss = true;
@@ -60,13 +63,33 @@ public class GeradorInimigos : MonoBehaviour
 
         pontosTexto.text = this.pontos.ToString();
 
-        if(this.pontos > baseLevel)
+        // Muda a cor das partículas ao atingir 10.000 pontos
+        if (this.pontos >= 10000)
+        {
+            MudaCorParticulas(Color.yellow);
+        }
+        if(this.pontos >= 20000)
+        {
+            MudaCorParticulas(Color.red);
+        }
+
+        if (this.pontos > baseLevel)
         {
             level++;
-
             baseLevel *= 2;
         }
     }
+
+    private void MudaCorParticulas(Color novaCor)
+    {
+        if (sistemaParticulas != null)
+        {
+            var main = sistemaParticulas.main; // Acessa o módulo "Main"
+            main.startColor = novaCor;        // Define a nova cor
+        }
+    }
+
+
 
     public void DiminuiQuantidade()
     {

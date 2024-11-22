@@ -5,13 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 78c0450b8f012db4ba3fbde2ad84c161
   - enabled: 1
     path: Assets/Scenes/Jogo.unity
     guid: 29cfd0d518db63b4990d7012f7176923
+  - enabled: 1
+    path: Assets/Scenes/Tutorial - Gameplay.unity
+    guid: 6615e8182a2f2f046b873cf16c08e9c8
+  - enabled: 1
+    path: Assets/Scenes/Tutorial - Itens.unity
+    guid: acf2010ec855f0b41a7b4cc9e937069a
+  - enabled: 1
+    path: Assets/Scenes/Morte.unity
+    guid: 859e6e6b34864774eb94915bcfdafa81
+  - enabled: 1
+    path: Assets/Scenes/Vitoria.unity
+    guid: d2f07c06a056788489a697bf2951c694
+  - enabled: 1
+    path: Assets/Scenes/Historia.unity
+    guid: c0c22732b8d6f384abc3a3acab4f2270
+  - enabled: 1
+    path: Assets/Scenes/Perdoar.unity
+    guid: f07d66e457ac89743997587b5ef1d4d0
+  - enabled: 1
+    path: Assets/Scenes/SeVingar.unity
+    guid: 5911cd72a90a6134eb0db3741b312d0f
+  - enabled: 1
+    path: "Assets/Scenes/Cr\xE9ditos.unity"
+    guid: 48bf33941d29eca428153a6a201576f4
   m_configObjects: {}

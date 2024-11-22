@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform posicaoTiroPlayer;
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject explosao;
-
     [SerializeField] private float velocidadeTiro = 10;
-
     [SerializeField] private float xLimite;
     [SerializeField] private float yLimite;
     [SerializeField] private int levelTiro = 1;
@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
     private GameObject escudoAtual;
     private float escudoTimer = 0f;
     [SerializeField] private int qtdEscudo = 3;
+    [SerializeField] private int qtdBomba = 0;
     [SerializeField] private Text vidaTexto;
     [SerializeField] private Text escudoTexto;
+    [SerializeField] private Text bombaTexto;
+    [SerializeField] private float delayVida = 10f;
     [SerializeField] private AudioClip somTiro;
     [SerializeField] private AudioClip somMorte;
     [SerializeField] private AudioClip somEscudo;
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
         Movendo();
         Atirando();
         CriaEscudo();
+        CriaBomba();
     }
 
     private void CriaEscudo()
@@ -137,12 +141,24 @@ public class PlayerController : MonoBehaviour
     	transform.position = new Vector3(meuX,meuY,transform.position.z);
     }
 
+    IEnumerator VoltarCorOriginal()
+    {
+        // Espera por 2 segundos
+        yield return new WaitForSeconds(0.2f);
+
+        // Volta a cor para branco
+        GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+    }
 
     public void PerdeVida(int dano){
         //Toma dano da vida
         vida -= dano;
 
         vidaTexto.text = vida.ToString();
+
+        GetComponentInChildren<SpriteRenderer>().color = new Color32(250,100,100,255);
+
+        StartCoroutine(VoltarCorOriginal());
 
         if (vida <= 0){
             Destroy(gameObject);
@@ -154,9 +170,10 @@ public class PlayerController : MonoBehaviour
             //Carrega Menu
             var gameManager = FindObjectOfType<GameManager>();
 
-            gameManager.Menu();
+            gameManager.Morte();
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -166,8 +183,54 @@ public class PlayerController : MonoBehaviour
             {
                 levelTiro++;
             }
-
+            Destroy(other.gameObject);
+        }
+        if(other.CompareTag("Bomba"))
+        {
+            if(qtdBomba<3)
+            {
+                qtdBomba++;
+            }
+            Destroy(other.gameObject);
+        }
+        if(other.CompareTag("Escudo"))
+        {   
+            if(qtdEscudo < 10)
+            {
+                qtdEscudo++;
+            }
             Destroy(other.gameObject);
         }
     }
+
+
+    private void CriaBomba()
+    {
+        bombaTexto.text = qtdBomba.ToString();
+
+        if (Input.GetButtonDown("Bomba") && qtdBomba > 0)
+        {
+            // Obter todos os inimigos que derivam de InimigoPai
+            InimigoPai[] inimigos = FindObjectsOfType<InimigoPai>();
+
+            foreach (var inimigo in inimigos)
+            {
+                // Verificar se o inimigo está visível
+                Renderer renderer = inimigo.GetComponent<Renderer>();
+                if (renderer != null && renderer.isVisible)
+                {
+                    inimigo.PerdeVida(100); // Aplica dano diretamente no inimigo atual
+                }
+            }
+
+            // Reduzir a quantidade de bombas
+            qtdBomba--;
+            bombaTexto.text = qtdBomba.ToString();
+        }
+    }
+
+
+
 }
+
+

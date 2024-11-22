@@ -223,7 +223,11 @@ MonoBehaviour:
   velocidadeTiro: 3
   pontos: 25
   powerUp: {fileID: 4223714539278304552, guid: 6a895ae833b21eb4f89de5601263a3ea, type: 3}
+  powerUpBomba: {fileID: 3197259320727332964, guid: 7561cafec8decab4aaccc1e25331e610, type: 3}
+  powerUpBateria: {fileID: 7405579916100821389, guid: 786fde21b381d6c4dbd54e6951657ba3, type: 3}
   itemRate: 0.97
+  itemRateBomba: 0.98
+  itemRateEscudo: 0.99
   somTiro: {fileID: 8300000, guid: bf11eedf7efc944448b95c1b34126b68, type: 3}
   posicaoTiro: {fileID: 7130024794191874230}
   yMax: 2.5

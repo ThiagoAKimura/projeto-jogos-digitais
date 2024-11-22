@@ -29,14 +29,27 @@ public class GameManager : MonoBehaviour
         
     }
 
-    IEnumerator PrimeiraCena()
+
+    IEnumerator CenaMorte()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Morte");
     }
 
-    public void Menu()
+    public void Morte()
     {
-        StartCoroutine(PrimeiraCena());
+        StartCoroutine(CenaMorte());
     }
+
+    IEnumerator CenaVitoria()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Vitoria");
+    }
+
+    public void Vitoria()
+    {
+        StartCoroutine(CenaVitoria());
+    }
+
 }

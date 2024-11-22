@@ -8,6 +8,8 @@ TagManager:
   - Jogador
   - Destruidor
   - Power Up
+  - Bomba
+  - Escudo
   layers:
   - Default
   - TransparentFX

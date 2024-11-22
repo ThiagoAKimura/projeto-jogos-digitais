@@ -12,7 +12,11 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected float velocidadeTiro = 5f;
     [SerializeField] protected int pontos = 10;
     [SerializeField] protected GameObject powerUp;
+    [SerializeField] protected GameObject powerUpBomba;
+    [SerializeField] protected GameObject powerUpBateria;
     [SerializeField] protected float itemRate = 0.9f;
+    [SerializeField] protected float itemRateBomba = 0.5f;
+    [SerializeField] protected float itemRateEscudo = 0.5f;
     [SerializeField] protected AudioClip somTiro;
 
 
@@ -47,7 +51,7 @@ public class InimigoPai : MonoBehaviour
 
                 if(powerUp)
                 {
-                DropaItem();
+                    DropaItem();
                 }
 
                 var gerador = FindObjectOfType<GeradorInimigos>();
@@ -101,9 +105,23 @@ public class InimigoPai : MonoBehaviour
         {
             GameObject pU = Instantiate(powerUp, transform.position, transform.rotation);
             Destroy(pU, 5.2f);
-
             Vector2 dir = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
             pU.GetComponent<Rigidbody2D>().velocity = dir;
+        }
+        if(chance > itemRateBomba)
+        {
+            GameObject Bomb = Instantiate(powerUpBomba, transform.position, transform.rotation);
+            Destroy(Bomb, 5.2f);
+            Vector2 dirBomb = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
+            Bomb.GetComponent<Rigidbody2D>().velocity = dirBomb;
+            
+        }
+        if(chance > itemRateEscudo)
+        {
+            GameObject Shield = Instantiate(powerUpBateria, transform.position, transform.rotation);
+            Destroy(Shield, 5.2f);
+            Vector2 dirBateria = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
+            Shield.GetComponent<Rigidbody2D>().velocity = dirBateria;
         }
     }
 }
